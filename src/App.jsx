@@ -4,6 +4,10 @@ function App() {
     <>
       <Header />
       <AiAgents />
+      <Company />
+      <DevelopAi />
+      <Company />
+      <Company />
     </>
   )
 }
@@ -13,29 +17,29 @@ function Header() {
   return (
     <>
       <div className=" m-10 flex justify-between " >
-        {/* <img className="flex justify-start"  src="/fetch.ai.png" alt="fetch.ai" /> */}
+
         <div className="flex justify-start py-3">
 
-        <svg width="32" height="32" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <circle cx="11" cy="10" r="5" fill="#2A2A2A" />
-          <circle cx="11" cy="25" r="5" fill="#2A2A2A" />
-          <circle cx="11" cy="40" r="5" fill="#2A2A2A" />
-          <circle cx="11" cy="55" r="5" fill="#D9D9D9" />
-          <circle cx="25" cy="10" r="5" fill="#2A2A2A" />
-          <circle cx="25" cy="25" r="5" fill="#2A2A2A" />
-          <circle cx="25" cy="40" r="5" fill="#D9D9D9" />
-          <circle cx="25" cy="55" r="5" fill="#D9D9D9" />
-          <circle cx="39" cy="10" r="5" fill="#2A2A2A" />
-          <circle cx="39" cy="25" r="5" fill="#D9D9D9" />
-          <circle cx="39" cy="40" r="5" fill="#D9D9D9" />
-          <circle cx="39" cy="55" r="5" fill="#D9D9D9" />
-          <circle cx="53" cy="10" r="5" fill="#D9D9D9" />
-          <circle cx="53" cy="25" r="5" fill="#D9D9D9" />
-          <circle cx="53" cy="40" r="5" fill="#D9D9D9" />
-          <circle cx="53" cy="55" r="5" fill="#D9D9D9" />
-        </svg>
+          <svg width="32" height="32" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="11" cy="10" r="5" fill="#2A2A2A" />
+            <circle cx="11" cy="25" r="5" fill="#2A2A2A" />
+            <circle cx="11" cy="40" r="5" fill="#2A2A2A" />
+            <circle cx="11" cy="55" r="5" fill="#D9D9D9" />
+            <circle cx="25" cy="10" r="5" fill="#2A2A2A" />
+            <circle cx="25" cy="25" r="5" fill="#2A2A2A" />
+            <circle cx="25" cy="40" r="5" fill="#D9D9D9" />
+            <circle cx="25" cy="55" r="5" fill="#D9D9D9" />
+            <circle cx="39" cy="10" r="5" fill="#2A2A2A" />
+            <circle cx="39" cy="25" r="5" fill="#D9D9D9" />
+            <circle cx="39" cy="40" r="5" fill="#D9D9D9" />
+            <circle cx="39" cy="55" r="5" fill="#D9D9D9" />
+            <circle cx="53" cy="10" r="5" fill="#D9D9D9" />
+            <circle cx="53" cy="25" r="5" fill="#D9D9D9" />
+            <circle cx="53" cy="40" r="5" fill="#D9D9D9" />
+            <circle cx="53" cy="55" r="5" fill="#D9D9D9" />
+          </svg>
 
-        <p className="text-3xl font-light pl-4">fetch.ai</p>
+          <p className="text-3xl font-light pl-4">fetch.ai</p>
         </div>
 
         <ul className="flex justify-center font-bold text-gray-700 py-4">
@@ -100,18 +104,46 @@ function AiAgents() {
 
         </div>
 
-        <img className="flex justify-start" src="/flowai.png" alt="fetch.ai" />
+        <img className="flex justify-start" src="/flowai.png" alt="fetch.flow.ai" />
 
       </div>
     </>
   )
 }
-// function Company () {
 
-// }
-// function DevelopAi () {
+function Company() {
+  return (
+    <img className="mx-auto" src="/companies.png" alt="company" />
+  )
+}
 
-// }
+function DevelopAi() {
+  return (
+    <div className="mx-44 pt-40">
+
+      <p className="text-7xl font-light py-4 ">Develop <span className="font-medium">Multi-Agent <br />Ai System </span>in Just Minute</p>
+      
+      <p className="text-gray-500 text-xl pt-4 pb-10">Using Fetch.ai universal Agents library - uAgents</p>
+      
+      <div className="grid grid-rows-2 gap-6">
+        {/* start here------------------------------------------------------------------------------------- */}
+        <p className="text-gray-500 text-xl "><h3 className="text-3xl">AI Communication with Langchain & More</h3>
+          Add communication capabilities to AI Agents developed using frameworks such as Langchain, CrewAI, Autogen,
+          Vertex AI and others
+        </p>
+
+        <p><h3>AI Communication with Langchain & More</h3>
+          Add communication capabilities to AI Agents developed using frameworks such as Langchain, CrewAI, Autogen,
+          Vertex AI and others
+        </p>
+        
+
+        
+      </div>
+    </div>
+  )
+}
+
 // function DeployAi () {
 
 // }
