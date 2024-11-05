@@ -45,7 +45,6 @@ function Header() {
           <li className="pr-16">Blog</li>
         </ul>
 
-
         <div className="flex ">
           <button className="font-bold text-gray-700 pr-10">Login</button>
           <button className="font-bold text-white bg-indigo-600 px-6 py-2 rounded-xl">
