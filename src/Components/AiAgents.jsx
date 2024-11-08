@@ -1,6 +1,7 @@
 import flowAi from "../images/flow.ai.png"
 import PropTypes from 'prop-types'
-import AHref from '../Components/buttons/buttons';
+import AHref from '../Components/buttons/ahref';
+import ClickButton from "../Components/buttons/buttons"
 
 
 function AiAgents() {
@@ -24,20 +25,13 @@ function AiAgents() {
   
           <div className="flex justify-center py-10">
   
-            <button className="flex font-bold text-white bg-indigo-600 mx-2 px-8 py-4 rounded-xl">
-              <span className="pr-2">Explore our tech</span>
-              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="w-6 h-6 ">
+            <ClickButton background={"bg-indigo-600 text-white"} data={"Explore our tech"} icon={ <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="w-6 h-6 ">
                 <path strokeLinecap="round" strokeLinejoin="round" d="m4.5 19.5 15-15m0 0H8.25m11.25 0v11.25" />
-              </svg>
-            </button>
-  
-            <button className=" flex font-bold text-indigo-600 border border-indigo-600 mx-4 px-8 py-4 rounded-xl">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-6 h-6">
+              </svg>}/>
+            <ClickButton background={"text-indigo-600 border border-indigo-600"} data={"Watch Video"} icon={ <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-6 h-6">
                 <path fillRule="evenodd" d="M2.25 12c0-5.385 4.365-9.75 9.75-9.75s9.75 4.365 9.75 9.75-4.365 9.75-9.75 9.75S2.25 17.385 2.25 12Zm14.024-.983a1.125 1.125 0 0 1 0 1.966l-5.603 3.113A1.125 1.125 0 0 1 9 15.113V8.887c0-.857.921-1.4 1.671-.983l5.603 3.113Z" clipRule="evenodd" />
-              </svg>
-              <span className="pl-2">Watch Video</span>
-            </button>
-  
+              </svg>}/>
+
             <p className="text-gray-500 ml-10 text-xl ">
               Develop, Deploy and orchestrate multi-agent systems
               <br />in an open Ai Agents marketplace
@@ -56,5 +50,6 @@ function AiAgents() {
 AiAgents.propTypes = {
   data: PropTypes.string.isRequired,
 };
+
 
   export default AiAgents

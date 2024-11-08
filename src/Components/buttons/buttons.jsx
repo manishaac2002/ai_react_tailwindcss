@@ -1,18 +1,19 @@
-
-
 import PropTypes from 'prop-types';
 
-const AHref = ({data, icon}) =>{
-    return(
-        <a href="" className="border border-indigo-400 px-6 py-2 rounded-3xl flex justify-center shadow-indigo-200 text-lg shadow-lg">
-              {icon} <span className="pl-2">{data}</span>
-            </a>
-    )
-  }
-  // Adding prop types for validation
-  AHref.propTypes = {
-    data: PropTypes.string.isRequired,
-    icon: PropTypes.element,
-  };
+const ClickButton = ({data, icon, background}) => {
+  return (
+    <button className={`flex font-bold ${background} mx-2 px-8 py-4 rounded-xl`}>
+      <span className="pr-2">{data}</span>
+      {icon}
+    </button>
+  )
+}
 
-  export default AHref;
+ClickButton.propTypes = {
+  data: PropTypes.string.isRequired,
+  icon: PropTypes.element,
+  background: PropTypes.string
+};
+
+export default ClickButton
+//text-white bg-indigo-600 

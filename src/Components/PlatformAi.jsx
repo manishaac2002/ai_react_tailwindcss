@@ -1,6 +1,8 @@
 import tech from "../images/tech.png";
 import PropTypes from 'prop-types'
-import AHref from '../Components/buttons/buttons';
+import AHref from '../Components/buttons/ahref';
+import ClickButton from "../Components/buttons/buttons"
+
 
 function PlatformAi () {
     return (
@@ -23,16 +25,10 @@ function PlatformAi () {
   
           <div className="flex justify-center py-10">
   
-            <button className="flex font-bold text-white bg-indigo-600 mx-2 px-8 py-4 rounded-xl">
-              <span className="pr-2">Try Agentverse</span>
-              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="w-6 h-6 ">
+            <ClickButton background={"bg-indigo-600 text-white"} data={"Try Agentverse"} icon={ <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="w-6 h-6 ">
                 <path strokeLinecap="round" strokeLinejoin="round" d="m4.5 19.5 15-15m0 0H8.25m11.25 0v11.25" />
-              </svg>
-            </button>
-  
-            <button className=" flex font-bold text-indigo-600 border border-indigo-600 mx-4 px-8 py-4 rounded-xl">
-              <span className="pl-2">Schedule a demo</span>
-            </button>
+              </svg>}/>
+            <ClickButton background={"text-indigo-600 border border-indigo-600"} data={"Schedule a demo"} />
   
           </div>
   
