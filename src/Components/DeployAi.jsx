@@ -1,17 +1,35 @@
 import deployAi from "../images/deploy.ai.png"
 import div from "../images/div.png"
+import { motion, useInView } from "framer-motion"
+import { useRef } from "react";
 function DeployAi() {
+  const ref = useRef(null);
+  const isInView = useInView(ref, { amount: 1, once: true });
   return (
     <div className="mx-44 pt-40  ">
 
       <div className="grid grid-cols-2 gap-24">
 
         <div>
-          <img className="flex justify-start" src={deployAi} alt="Deploy Ai" />
+          <motion.img
+            className="flex justify-start"
+            src={deployAi} alt="Deploy Ai"
+            ref={ref}
+            initial={{ opacity: 0, x: -100 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            animate={isInView ? { opacity: 1 } : { opacity: 0 }}
+            transition={{ duration: 1 }}
+          />
         </div>
 
-        <div>
-          <p className="text-6xl font-light py-4 ">Develop <span className="font-medium">Multi-Agent
+        <motion.div
+          ref={ref}
+          initial={{ opacity: 0, x: -100 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          animate={isInView ? { opacity: 1 } : { opacity: 0 }}
+          transition={{ duration: 1 }}
+        >
+          <p className="text-6xl font-light py-4 ">Deploy <span className="font-medium">Multi-Agent
             <br />Ai System </span>in Just Minutes
           </p>
 
@@ -38,7 +56,7 @@ function DeployAi() {
 
           </div>
 
-        </div>
+        </motion.div>
 
       </div>
 
