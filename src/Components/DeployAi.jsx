@@ -3,6 +3,7 @@ import div from "../images/div.png"
 import { motion, useInView } from "framer-motion"
 import { useRef } from "react";
 function DeployAi() {
+  
   const ref = useRef(null);
   const isInView = useInView(ref, { amount: 1, once: true });
   return (
