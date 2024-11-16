@@ -4,33 +4,61 @@ import security from "../images/security.png"
 import PropTypes from 'prop-types'
 import AHref from '../Components/buttons/ahref';
 import ClickButton from "../Components/buttons/buttons"
+import { motion, useInView } from "framer-motion"
+import { useRef } from "react";
 
 function TechnologyAi() {
-
+  const ref = useRef(null);
+  const isInView = useInView(ref, { amount: 1, once: true });
   return (
     <div className="mx-44 pt-40  ">
 
       <div className="border border-gray-300  bg-indigo-50 rounded-3xl pt-16 pb-24">
 
-        <div className="py-4 flex justify-center">
+        <motion.div className="py-4 flex justify-center"
+          ref={ref}
+          initial={{ opacity: 0, y: -100 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          animate={isInView ? { opacity: 1 } : { opacity: 0 }}
+          transition={{ duration: 1 }}>
 
           <AHref data={"TECHNOLOGY"} icon={<svg className="w-6 h-6" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512">!Font Awesome Free 6.6.0 by
             @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons,
             Inc.--<path d="M320 0c17.7 0 32 14.3 32 32l0 64 120 0c39.8 0 72 32.2 72 72l0 272c0 39.8-32.2 72-72 72l-304 0c-39.8 0-72-32.2-72-72l0-272c0-39.8 32.2-72 72-72l120 0 0-64c0-17.7 14.3-32 32-32zM208 384c-8.8 0-16 7.2-16 16s7.2 16 16 16l32 0c8.8 0 16-7.2 16-16s-7.2-16-16-16l-32 0zm96 0c-8.8 0-16 7.2-16 16s7.2 16 16 16l32 0c8.8 0 16-7.2 16-16s-7.2-16-16-16l-32 0zm96 0c-8.8 0-16 7.2-16 16s7.2 16 16 16l32 0c8.8 0 16-7.2 16-16s-7.2-16-16-16l-32 0zM264 256a40 40 0 1 0 -80 0 40 40 0 1 0 80 0zm152 40a40 40 0 1 0 0-80 40 40 0 1 0 0 80zM48 224l16 0 0 192-16 0c-26.5 0-48-21.5-48-48l0-96c0-26.5 21.5-48 48-48zm544 0c26.5 0 48 21.5 48 48l0 96c0 26.5-21.5 48-48 48l-16 0 0-192 16 0z" />
           </svg>} />
-        </div>
+        </motion.div>
 
-        <div className="flex justify-center text-gray-900">
+        <motion.div className="flex justify-center text-gray-900"
+          ref={ref}
+          initial={{ opacity: 0, y: -100 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          animate={isInView ? { opacity: 1 } : { opacity: 0 }}
+          transition={{ duration: 1 }}>
           <p className="text-6xl font-light py-4">Transforming
             <span className="font-medium "> Experiences <br />with Powerful </span>
             Features</p>
-        </div>
+        </motion.div>
 
-        <p className="text-xl text-gray-500 pt-4 flex justify-center">Create AI Agents from scratch powered by any combination</p>
+        <motion.p
+          className="text-xl text-gray-500 pt-4 flex justify-center"
+          ref={ref}
+          initial={{ opacity: 0, y: -100 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          animate={isInView ? { opacity: 1 } : { opacity: 0 }}
+          transition={{ duration: 1 }}
+        >Create AI Agents from scratch powered by any combination</motion.p>
 
-        <div className="grid grid-cols-2 m-10 px-32 gap-14">
+        <motion.div className="grid grid-cols-2 m-10 px-32 gap-14"
+        ref={ref}
+        initial={{ opacity: 0, y: -100 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        animate={isInView ? { opacity: 1 } : { opacity: 0 }}
+        transition={{ duration: 1 }}>
 
-          <div className="border border-indigo-100 rounded-3xl bg-slate-50">
+          <div
+            className="border border-indigo-100 rounded-3xl bg-slate-50"
+            
+          >
             <img className="pt-5 p-5" src={person} alt="Person" />
             <h3 className="px-5 text-gray-900 font-medium text-2xl">Real-time Communication</h3>
             <p className="px-5 text-gray-400 pt-3 pb-8 text-xl">Ai agents use TCP/IP for instant data transfer across networks</p>
@@ -42,11 +70,16 @@ function TechnologyAi() {
             <p className="px-5 text-gray-400 pt-3 pb-8 text-xl">TCP/IP enables distributed AI agents to scale across systems</p>
           </div>
 
-        </div>
+        </motion.div>
 
         <div className="mx-40 rounded-3xl border border-indigo-100 bg-slate-50 pb-10">
 
-          <div className="grid grid-cols-2 px-10 gap-14">
+          <motion.div
+           ref={ref}
+           initial={{ opacity: 0, x: 100 }}
+           whileInView={{ opacity: 1, x:0 }}
+           animate={isInView ? { opacity: 1 } : { opacity: 0 }}
+           transition={{ duration: 1}} className="grid grid-cols-2 px-10 gap-14">
 
             <div className="">
               <img className="pt-5 " src={security} alt="Security" />
@@ -63,7 +96,8 @@ function TechnologyAi() {
               </svg>} />
             </div>
 
-          </div>
+          </motion.div>
+          
         </div>
 
       </div>

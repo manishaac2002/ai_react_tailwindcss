@@ -1,11 +1,21 @@
 import div from "../images/div.png"
 import dev from "../images/dev.ai.png"
+import { motion, useInView } from "framer-motion"
+import { useRef } from "react";
 function DevelopAi() {
+  const ref = useRef(null);
+  const isInView = useInView(ref, { amount: 1, once: true });
   return (
     <div className="mx-44 pt-40  ">
 
       <div className="grid grid-cols-2 gap-5">
-        <div>
+        <motion.div
+        ref={ref}
+        initial={{ opacity: 0, x: 100 }}
+        whileInView={{ opacity: 1, x:0 }}
+        animate={isInView ? { opacity: 1 } : { opacity: 0 }}
+        transition={{ duration: 1}}
+        >
           <p className="text-6xl font-light py-4 ">Develop <span className="font-medium">Multi-Agent
             <br />Ai System </span>in Just Minutes
           </p>
@@ -33,10 +43,19 @@ function DevelopAi() {
 
           </div>
 
-        </div>
+        </motion.div>
 
         <div>
-          <img className="flex justify-start" src={dev} alt="Develop Ai" />
+          <motion.img
+            className="flex justify-start"
+            src={dev}
+            alt="Develop Ai"
+            ref={ref}
+            initial={{ opacity: 0, x: 100 }}
+            whileInView={{ opacity: 1, x:0 }}
+            animate={isInView ? { opacity: 1 } : { opacity: 0 }}
+            transition={{ duration: 1}}
+             />
         </div>
       </div>
 
